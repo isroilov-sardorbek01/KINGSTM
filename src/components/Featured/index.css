@@ -1,0 +1,55 @@
+.feat-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    margin-top: 50px;
+}
+
+.feat-container h1 {
+    color: #2B3A4F;
+    font-weight: 500;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: none;
+    -webkit-box-shadow: 0px 10px 18px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 18px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 18px -12px rgba(0, 0, 0, 0.75);
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.4s all;
+}
+
+.card:hover {
+    -webkit-box-shadow: 0px 18px 52px -26px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 18px 52px -26px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 18px 52px -26px rgba(0, 0, 0, 0.75);
+}
+
+.card img {
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.cardDesc {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #394E6A;
+    font-weight: 600;
+}
+
+.cardPrice {
+    color: #464DB9;
+}
