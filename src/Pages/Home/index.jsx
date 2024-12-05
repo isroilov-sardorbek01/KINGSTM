@@ -1,10 +1,10 @@
 import React from 'react'
 import './index.css'
 import './index.css';
-import image1 from '../../images/mebel1Img.webp';
-import image2 from '../../images/mebel2Img.jpg';
-import image3 from '../../images/mebel3Img.jpg';
-import image4 from '../../images/mebel4Img.jpeg';
+import image1 from '../../images/img1.jpg';
+import image2 from '../../images/img3.jpg';
+import image3 from '../../images/img2.jpg';
+import image4 from '../../images/img1.jpg';
 import { useNavigate } from 'react-router-dom';
 import Featured from '../../components/Featured';
 

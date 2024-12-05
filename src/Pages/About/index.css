@@ -1,0 +1,32 @@
+.about-container {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.aboutDesc {
+    font-size: 60px;
+    line-height: 66px;
+    font-weight: 700;
+    color: #394E6A;
+    margin-bottom: 30px;
+}
+
+.aboutDesc span {
+    color: #DBE1FF;
+    background-color: #057AFF;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 40px;
+    letter-spacing: 5px;
+    border-radius: 10px;
+}
+
+.aboutTitle {
+    font-size: 18px;
+    margin-bottom: 7px;
+    font-weight: 500;
+    color: #394E6A;
+    text-align: center;
+}

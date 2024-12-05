@@ -33,8 +33,9 @@ body {
 }
 
 .loginDesc {
-  color: white;
+  color: #C7C9D1;
   text-decoration: none;
+  font-size: 14px;
 }
 
 .header {
@@ -95,4 +96,5 @@ body {
 
 .headTitle a.active {
   background-color: black;
+  color: #C7C9D1;
 }

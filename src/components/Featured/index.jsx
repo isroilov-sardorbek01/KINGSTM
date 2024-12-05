@@ -1,8 +1,8 @@
 import React from 'react'
 import './index.css'
-import imageCard1 from '../../images/mebel1Img.webp';
-import imagecard2 from '../../images/mebel2Img.jpg';
-import imageCard3 from '../../images/mebel3Img.jpg'
+import imageCard1 from '../../images/img2.jpg';
+import imagecard2 from '../../images/img3.jpg';
+import imageCard3 from '../../images/img4.jpg'
 
 function Featured() {
     return (

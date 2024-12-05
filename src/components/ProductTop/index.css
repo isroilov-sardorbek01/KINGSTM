@@ -1,0 +1,107 @@
+.top-container {
+    background-color: #EFF5FE;
+    margin-top: 90px;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.productSame {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.select1Flex {
+    display: flex;
+    font-size: 15px;
+    gap: 3px;
+    flex-direction: column;
+}
+
+#select1Input {
+    width: 240px;
+    padding: 5px;
+    border-radius: 7px;
+    border: 1px solid #D7DCE1;
+    cursor: pointer;
+}
+
+#select2Value {
+    width: 240px;
+    padding: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 1px solid #D7DCE1;
+}
+
+#select3Value {
+    width: 240px;
+    padding: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 1px solid #D7DCE1;
+}
+
+.productSame2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.labelTopSame {
+    display: flex;
+    gap: 95px;
+}
+
+#selectPrice1 {
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.labelBottomSame {
+    display: flex;
+    gap: 125px;
+}
+
+.topdesc1 {
+    color: #394E6A;
+}
+
+#selectFlex {
+    display: flex;
+    flex-direction: column;
+    color: #394E6A;
+    gap: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* #057AFF */
+.productBtn1 {
+    background-color: #057AFF;
+    padding: 8px 100px;
+    font-size: 15px;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.productBtn2 {
+    background-color: #C149AD;
+    padding: 8px 100px;
+    font-size: 15px;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.productSame2 button:active {
+    transform: scale(0.95);
+}

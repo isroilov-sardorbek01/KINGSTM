@@ -1,4 +1,5 @@
 import React from 'react'
+import './index.css'
 
 function ProductTop() {
     return (
@@ -6,13 +7,13 @@ function ProductTop() {
             <div className="container top-container">
                 <div className="productSame">
                     <div className="select1">
-                        <label htmlFor="select1Input">
+                        <label className='select1Flex' htmlFor="select1Input">
                             Search Product
                             <input id='select1Input' type="text" placeholder='' />
                         </label>
                     </div>
                     <div className="select2">
-                        <label htmlFor="select2Value">
+                        <label className='select1Flex' htmlFor="select2Value">
                             Select Category
                             <select id="select2Value">
                                 <option value="all">all</option>
@@ -25,7 +26,8 @@ function ProductTop() {
                         </label>
                     </div>
                     <div className="select3">
-                        <label htmlFor="select3Value">
+                        <label className='select1Flex' htmlFor="select3Value">
+                            Select Company
                             <select id="select3Value">
                                 <option value="all">all</option>
                                 <option value="Modenza">Modenza</option>
@@ -37,8 +39,8 @@ function ProductTop() {
                         </label>
                     </div>
                     <div className="select4">
-                        <label htmlFor="select3Value">
-                            Select Company
+                        <label className='select1Flex' htmlFor="select3Value">
+                            Sort by
                             <select id="select3Value">
                                 <option value="a-z">a-z</option>
                                 <option value="z-a">z-a</option>
@@ -51,12 +53,19 @@ function ProductTop() {
                 <div className="productSame2">
                     <div className="selectPrice">
                         <label htmlFor="selectPrice1">
-                            Select Price $0.00
-                            <input id='selectPrice1' type="number" placeholder='Price of thing' />
+                            <div className="labelTopSame">
+                                <div className="topdesc1">Select price</div>
+                                <div className="topdesc1">$1,000.00 </div>
+                            </div>
+                            <input id='selectPrice1' type="range" placeholder='Price of thing' />
+                            <div className="labelBottomSame">
+                                <div className="botdesc1">0</div>
+                                <div className="botdesc2">Max : $1,000.00 </div>
+                            </div>
                         </label>
                     </div>
                     <div className="selectShiping">
-                        <label htmlFor="selectCheck">
+                        <label id='selectFlex' htmlFor="selectCheck">
                             Free Shipping
                             <input type="checkbox" id='selectCheck' />
                         </label>

@@ -5,6 +5,7 @@ import image from '../src/images/korzinka.svg';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Products from './Pages/Products';
+import Cart from './Pages/Cart';
 
 function App() {
   const isNav = useNavigate();
@@ -36,7 +37,7 @@ function App() {
               <NavLink to='/products' className={({ isActive }) => isActive ? 'active' : 'nonactive'}>Products</NavLink>
             </li>
             <li className='headTitle'>
-              <NavLink className={({ isActive }) => isActive ? 'active' : 'nonactive'}>Cart</NavLink>
+              <NavLink to='/cart' className={({ isActive }) => isActive ? 'active' : 'nonactive'}>Cart</NavLink>
             </li>
           </ul>
           <div className="appSame">
@@ -49,6 +50,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/products' element={<Products></Products>}></Route>
+        <Route path='/cart' element={<Cart/>}></Route>
       </Routes>
     </div>
   )
