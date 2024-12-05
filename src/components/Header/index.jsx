@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import image from '../../images/korzinka.svg';
+import image from '../../images/MoonImg.svg';
+import image2 from '../../images/cart.svg'
 import './index.css';
 
 function Header() {
@@ -28,7 +29,8 @@ function Header() {
                     </li>
                 </ul>
                 <div className="appSame">
-                    <img src={image} width={40} height={40} alt="" />
+                    <img src={image} width={20} height={20} alt="" />
+                    <img className='styleImg' src={image2} width={20} height={20} alt="" />
                 </div>
             </div>
 
