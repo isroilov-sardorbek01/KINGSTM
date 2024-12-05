@@ -1,3 +1,6 @@
+.featured{
+margin-top: 80px;
+}
 .feat-container {
     display: flex;
     flex-direction: column;

@@ -1,6 +1,7 @@
 import React from 'react';
-import { useNavigate, NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import image from '../../images/korzinka.svg';
+import './index.css';
 
 function Header() {
     const isNav = useNavigate();
@@ -30,6 +31,7 @@ function Header() {
                     <img src={image} width={40} height={40} alt="" />
                 </div>
             </div>
+
         </div>
     )
 }

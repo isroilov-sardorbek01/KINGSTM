@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css'
+import './index.css';
 
 function About() {
   return (
@@ -7,10 +7,10 @@ function About() {
       <div className="container ">
         <div className="about-container">
           <div className="aboutDesc">We love <span>comfy</span></div>
-          <div className="aboutTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quae quam </div>
-          <div className="aboutTitle">blanditiis vitae, dolor non eveniet ipsum voluptatibus, quia optio aut! Perferendis </div>
-          <div className="aboutTitle">ipsa cumque ipsam nostrum reprehenderit ad illo sed officiis ea tempore! Similique </div>
-          <div className="aboutTitle">eos minima sit porro, ratione aspernatur!</div>
+          <div className="aboutTitle">
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quae quam <br /> blanditiis vitae, dolor non eveniet ipsum voluptatibus, quia optio aut! Perferendis <br /> ipsa cumque ipsam nostrum reprehenderit ad illo sed officiis ea tempore! Similique <br /> eos minima sit porro, ratione aspernatur!
+            </p>
+          </div>
         </div>
       </div>
     </div>

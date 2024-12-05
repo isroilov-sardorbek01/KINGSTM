@@ -1,0 +1,144 @@
+.detail-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.wr {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.wr-left img {
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.wrDesc {
+    color: #394E6A;
+    margin-bottom: 15px;
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 700;
+}
+
+.wrCategory {
+    color: #C7C9D1;
+    margin-bottom: 15px;
+    font-size: 23px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.wrPrice {
+    font-size: 22px;
+    line-height: 20px;
+    color: #394E6A;
+    margin-bottom: 25px;
+}
+
+.wr-right p {
+    font-size: 17px;
+    line-height: 20px;
+    color: #394E6A;
+    margin-bottom: 24px;
+    text-align: start;
+}
+
+.wrColors {
+    color: #394E6A;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.colorSame {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.color1 {
+    content: '';
+    width: 20px;
+    background-color: #FF5733;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.color1:active {
+    border: 1px solid black;
+}
+
+.color2 {
+    content: '';
+    width: 20px;
+    background-color: #33FF57;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.color2:active {
+    border: 1px solid black;
+}
+
+.color3 {
+    content: '';
+    width: 20px;
+    background-color: #3366FF;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.color3:active {
+    border: 1px solid black;
+}
+
+.wr-right label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+    color: #394E6A;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+}
+
+#wrSelect {
+    padding: 15px;
+    border: 2px solid #43379A;
+    background-color: transparent;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 65%;
+}
+
+#wrSelect:focus {
+    outline: none;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(67, 55, 154, 1);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(67, 55, 154, 1);
+    box-shadow: 0px 0px 5px 1px rgba(67, 55, 154, 1);
+}
+.wrBtn{
+    background-color: #463AA1;
+    color: #DBD4ED;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+.wrBtn:active{
+    transform: scale(0.90);
+}

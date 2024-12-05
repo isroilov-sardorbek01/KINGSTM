@@ -22,7 +22,7 @@ function Home() {
         <div className='home'>
             <div className="container home-container">
                 <div className="home-left">
-                    <h1 onClick={handleGet}>We are changing the way people shop</h1>
+                    <h1>We are changing the way people shop</h1>
                     <p className='homeTitle'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                     <p className='homeTitle'>Tempore repellat explicabo enim soluta temporibus asperiores</p>
                     <p className='homeTitle1'>aut obcaecati perferendis porro nobis.</p>

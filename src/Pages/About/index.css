@@ -1,5 +1,5 @@
 .about-container {
-    text-align: center;
+
     margin-top: 80px;
 }
 
@@ -9,6 +9,7 @@
     font-weight: 700;
     color: #394E6A;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .aboutDesc span {
@@ -23,10 +24,16 @@
     border-radius: 10px;
 }
 
-.aboutTitle {
+.aboutTitle p {
     font-size: 18px;
     margin-bottom: 7px;
     font-weight: 500;
     color: #394E6A;
-    text-align: center;
+    line-height: 30px;
+}
+
+.aboutTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
