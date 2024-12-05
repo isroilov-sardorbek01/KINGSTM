@@ -4,6 +4,7 @@ import { Navigate, NavLink, Route, Routes, useNavigate } from 'react-router-dom'
 import image from '../src/images/korzinka.svg';
 import Home from './Pages/Home';
 import About from './Pages/About';
+import Products from './Pages/Products';
 
 function App() {
   const isNav = useNavigate();
@@ -29,13 +30,13 @@ function App() {
               <NavLink to='/' className={({ isActive }) => isActive ? 'active' : 'nonactive'}>Home</NavLink>
             </li>
             <li className='headTitle'>
-              <NavLink to='/about' className='headLink'>About</NavLink>
+              <NavLink to='/about' className={({ isActive }) => isActive ? 'active' : 'nonactive'}>About</NavLink>
             </li>
             <li className='headTitle'>
-              <NavLink className='headLink'>Products</NavLink>
+              <NavLink to='/products' className={({ isActive }) => isActive ? 'active' : 'nonactive'}>Products</NavLink>
             </li>
             <li className='headTitle'>
-              <NavLink className='headLink'>Cart</NavLink>
+              <NavLink className={({ isActive }) => isActive ? 'active' : 'nonactive'}>Cart</NavLink>
             </li>
           </ul>
           <div className="appSame">
@@ -47,7 +48,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/about' element={<About></About>}></Route>
-        {/* <Route path='/products' element={<Products></Products>}></Route> */}
+        <Route path='/products' element={<Products></Products>}></Route>
       </Routes>
     </div>
   )
