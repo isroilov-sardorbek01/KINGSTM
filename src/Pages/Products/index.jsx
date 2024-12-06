@@ -36,7 +36,12 @@ function Products() {
                                         <div className="openCard" onClick={() => { handleOpenCardInfo(thing.id) }} key={index}>
                                             <img src={thing.attributes.image} width={200} height={220} alt="" />
                                             <div className="cardDesc">{thing.attributes.title}</div>
-                                            <div className="cardPrice">${thing.attributes.price}</div>
+                                            <div className="cardPrice">
+                                                ${String(thing.attributes.price)
+                                                    .split('')
+                                                    .map((char, index) => (index === 2 ? char + '.' : char))
+                                                    .join('')}
+                                            </div>
                                         </div>
                                     )
                                 })

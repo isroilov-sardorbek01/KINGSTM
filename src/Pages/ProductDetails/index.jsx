@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import './index.css'
 
 function ProductDeatails() {
     const [product, setProduct] = useState({})
     const { id } = useParams();
+    const navigate = useNavigate()
 
     useEffect(function () {
         axios.get(`https://strapi-store-server.onrender.com/api/products/${id}`)
@@ -17,12 +18,21 @@ function ProductDeatails() {
             .catch()
     }, [])
 
+    function handleOpen(e) {
+        e.preventDefault()
+        navigate('/')
+    }
+    function handleOpenProducts(e) {
+        e.preventDefault()
+        navigate('/products')
+    }
     return (
         <div className='details'>
             <div className="container detail-container">
                 <div className="detail-top">
-                    <div className="detailLink1">Home {'>'} </div>
-                    <div className="detailLink2">Products</div>
+                    <div className="detailLink1" onClick={handleOpen}>Home  </div>
+                    <div className="detailLink3">{'>'}</div>
+                    <div className="detailLink2" onClick={handleOpenProducts}>Products</div>
                 </div>
                 {
                     product.id && <>
@@ -33,7 +43,12 @@ function ProductDeatails() {
                             <div className="wr-right">
                                 <div className="wrDesc">{product.attributes.title}</div>
                                 <div className="wrCategory">{product.attributes.category}</div>
-                                <div className="wrPrice">${product.attributes.price}</div>
+                                <div className="wrPrice">
+                                    ${String(product.attributes.price)
+                                        .split('')
+                                        .map((char, index) => (index === 2 ? char + '.' : char))
+                                        .join('')}
+                                </div>
                                 <p>{product.attributes.description}</p>
                                 <div className="wrColors">Colors </div>
                                 <div className="colorSame">

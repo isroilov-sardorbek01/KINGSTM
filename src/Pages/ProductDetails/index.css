@@ -5,7 +5,24 @@
     cursor: pointer;
     gap: 10px;
 }
-
+.detailLink1{
+    color: #364A65;
+    font-size: 15px;
+}
+.detailLink1:hover{
+    text-decoration: underline;
+}
+.detailLink3{
+    color: #364A65;
+    font-size: 15px;
+}
+.detailLink2{
+    color: #364A65;
+    font-size: 15px; 
+}
+.detailLink2:hover{
+    text-decoration: underline;
+}
 .wr {
     display: flex;
     justify-content: space-between;
