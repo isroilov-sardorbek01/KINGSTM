@@ -7,6 +7,9 @@ function ProductDeatails() {
     const [product, setProduct] = useState({})
     const { id } = useParams();
     const navigate = useNavigate()
+    const [selectedColor, setSelectedColor] = useState(null);
+    const [mount, setMount] = useState('1');
+
 
     useEffect(function () {
         axios.get(`https://strapi-store-server.onrender.com/api/products/${id}`)
@@ -15,8 +18,12 @@ function ProductDeatails() {
                     setProduct(response.data.data)
                 }
             })
-            .catch()
-    }, [])
+            .catch(err => {
+                console.log(err);
+
+            })
+    }, [id])
+
 
     function handleOpen(e) {
         e.preventDefault()
@@ -25,6 +32,26 @@ function ProductDeatails() {
     function handleOpenProducts(e) {
         e.preventDefault()
         navigate('/products')
+    }
+    function onCart(e) {
+        e.preventDefault(e)
+        alert('Product is added');
+
+        const data = {
+            pr: {
+                image: product.attributes.image,
+                title: product.attributes.title,
+                category: product.attributes.category,
+                price: product.attributes.price,
+                colors: product.attributes.colors,
+                mount: mount,
+                id: product.id
+            },
+            selectedColor: selectedColor,
+        }
+        const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
+        storedCart.push(data);
+        localStorage.setItem('cart', JSON.stringify(storedCart));
     }
     return (
         <div className='details'>
@@ -52,13 +79,27 @@ function ProductDeatails() {
                                 <p>{product.attributes.description}</p>
                                 <div className="wrColors">Colors </div>
                                 <div className="colorSame">
-                                    <div className="color1"></div>
-                                    <div className="color2"></div>
-                                    <div className="color3"></div>
+                                    {product.attributes.colors.length > 0 &&
+                                        product.attributes.colors.map((value, index) => (
+                                            <div
+                                                key={index}
+                                                className="colors"
+                                                style={{
+                                                    width: '20px',
+                                                    padding: '10px',
+                                                    borderRadius: '50%',
+                                                    backgroundColor: value,
+                                                    border: selectedColor === value ? '2px solid black' : '1px solid transparent',
+                                                    cursor: 'pointer'
+                                                }}
+                                                onClick={() => setSelectedColor(value)}
+                                            ></div>
+                                        ))
+                                    }
                                 </div>
                                 <label htmlFor="wrSelect">
                                     Amount
-                                    <select id="wrSelect">
+                                    <select value={mount} onChange={(e) => setMount(e.target.value)} id="wrSelect">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -81,7 +122,7 @@ function ProductDeatails() {
                                         <option value="20">20</option>
                                     </select>
                                 </label>
-                                <button className='wrBtn'>ADD TO BAG</button>
+                                <button onClick={onCart} className='wrBtn'>ADD TO BAG</button>
                             </div>
                         </div>
                     </>

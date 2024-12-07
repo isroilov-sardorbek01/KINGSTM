@@ -13,6 +13,7 @@ margin-top: 80px;
     justify-content: space-between;
     margin-bottom: 70px;
     margin-top: 50px;
+    gap: 20px;
 }
 
 .feat-container h1 {

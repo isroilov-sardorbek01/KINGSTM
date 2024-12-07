@@ -85,36 +85,11 @@
 .color1 {
     content: '';
     width: 20px;
-    background-color: #FF5733;
     padding: 10px;
     border-radius: 50%;
 }
 
 .color1:active {
-    border: 1px solid black;
-}
-
-.color2 {
-    content: '';
-    width: 20px;
-    background-color: #33FF57;
-    padding: 10px;
-    border-radius: 50%;
-}
-
-.color2:active {
-    border: 1px solid black;
-}
-
-.color3 {
-    content: '';
-    width: 20px;
-    background-color: #3366FF;
-    padding: 10px;
-    border-radius: 50%;
-}
-
-.color3:active {
     border: 1px solid black;
 }
 
