@@ -14,7 +14,6 @@ function Products() {
     useEffect(function () {
         axios.get('https://strapi-store-server.onrender.com/api/products')
             .then(response => {
-                console.log(response);
                 if (response.status == 200) {
                     setRes(response.data.data)
                 }

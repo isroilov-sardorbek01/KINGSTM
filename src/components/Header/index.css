@@ -2,6 +2,10 @@
     background-color: aliceblue;
 }
 
+.dark {
+    background-color: #021431;
+}
+
 .container {
     max-width: 1100px;
     width: 100%;
@@ -64,4 +68,19 @@
     align-items: center;
     gap: 20px;
     user-select: none;
+}
+
+.styleImg {
+    transition: 0.4s all;
+    cursor: pointer;
+}
+
+.styleImg:active {
+    transform: scale(1.20);
+    filter: drop-shadow(2px 2px 2px #394E6A);
+}
+
+.darkStyleImg {
+    filter: drop-shadow(2px 2px 2px aliceblue);
+    cursor: pointer;
 }

@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import image from '../../images/MoonImg.svg';
 import image2 from '../../images/cart.svg'
 import './index.css';
 
 function Header() {
+    const [darkmode, setDarkmode] = useState(false);
+
     const isNav = useNavigate();
     function handleOpen(e) {
         e.preventDefault();
         isNav('/')
     }
+    function handleOpenCart(e) {
+        e.preventDefault()
+        isNav('/cart')
+    }
+    function onDarkMode(e) {
+        e.preventDefault()
+        setDarkmode(!darkmode)
+    }
     return (
-        <div className="header">
+        <div className={darkmode === false ? 'header' : 'dark'}>
             <div className="container head-container">
                 <h1 onClick={handleOpen}>C</h1>
                 <ul className='headSame'>
@@ -29,8 +39,8 @@ function Header() {
                     </li>
                 </ul>
                 <div className="appSame">
-                    <img src={image} width={20} height={20} alt="" />
-                    <img className='styleImg' src={image2} width={20} height={20} alt="" />
+                    <img className={darkmode === false ? 'styleImg' : 'darkStyleImg'} src={image} onClick={onDarkMode} width={20} height={20} alt="" />
+                    <img className={darkmode === false ? 'styleImg' : 'darkStyleImg'} onClick={handleOpenCart} src={image2} width={20} height={20} alt="" />
                 </div>
             </div>
 
